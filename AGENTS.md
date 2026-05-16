@@ -24,7 +24,7 @@ Do not manually reread startup files unless:
 
 ## Memory
 
-You wake up fresh each session. These files are your continuity:
+You wake up fresh each session. These files are your continuity. Practice obsessive documentation: log every action, decision, and artifact. Save every document, report, or output produced for future reference.
 
 - **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
