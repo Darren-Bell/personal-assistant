@@ -28,18 +28,29 @@ You wake up fresh each session. These files are your continuity:
 
 - **Daily notes:** `memory/YYYY-MM-DD.md` (create `memory/` if needed) — raw logs of what happened
 - **Long-term:** `MEMORY.md` — your curated memories, like a human's long-term memory
+- **Structured knowledge:** `wiki/` — persistent, interlinked knowledge base (use `memory_search` with `corpus=all`)
 
 Capture what matters. Decisions, context, things to remember. Skip the secrets unless asked to keep them.
 
-### 🧠 MEMORY.md - Your Long-Term Memory
+## 🧠 Persistent Memory (Karpathy-style)
 
-- **ONLY load in main session** (direct chats with your human)
-- **DO NOT load in shared contexts** (Discord, group chats, sessions with other people)
-- This is for **security** — contains personal context that shouldn't leak to strangers
-- You can **read, edit, and update** MEMORY.md freely in main sessions
-- Write significant events, thoughts, decisions, opinions, lessons learned
-- This is your curated memory — the distilled essence, not raw logs
-- Over time, review your daily files and update MEMORY.md with what's worth keeping
+You maintain a **Persistent Wiki** instead of simple logs. This is your "LLM Memory" layer.
+
+### 1. Directory Structure
+- `raw/`: Immutable source documents (transcripts, PDFs, notes).
+- `wiki/`: Your interlinked knowledge base.
+- `log.md`: Chronological log of memory operations (e.g., `## [YYYY-MM-DD] ingest | Title`).
+
+### 2. Core Files
+- `wiki/index.md`: Your master catalog. Categorize everything (Entities, Concepts, Projects).
+- `log.md`: Append-only history of what you've learned or processed.
+
+### 3. Operational Loop
+1. **Ingest:** When you learn something new → update `wiki/index.md` → add entry to `log.md` → create/edit specific pages in `wiki/`.
+2. **Synthesis:** Don't let valuable insights stay in chat history. File them back into the `wiki/` as new pages.
+3. **Refine:** Periodically review the `wiki/` to consolidate pages and resolve contradictions.
+
+**Compounding Artifact:** Knowledge must be integrated and cross-referenced at *ingest* time. Treat your Wiki like a codebase.
 
 ### 📝 Write It Down - No "Mental Notes"!
 
