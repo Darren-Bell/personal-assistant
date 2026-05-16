@@ -1,0 +1,13 @@
+# OpenClaw Secrets and Sensitive Data
+secrets/
+.openclaw/
+backups/
+memory/
+*.log
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+.env
+auth-state.json
+auth-profiles.json
+credentials/
