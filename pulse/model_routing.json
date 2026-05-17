@@ -2,8 +2,9 @@
   "tasks": {
     "daily_checkin": "openrouter/deepseek/deepseek-v4-flash",
     "workout_log": "openrouter/deepseek/deepseek-v4-flash",
-    "initial_assessment": "openrouter/anthropic/claude-3-5-sonnet",
-    "plan_adjustment": "openrouter/anthropic/claude-3-5-sonnet",
-    "nutrition_planning": "openrouter/anthropic/claude-3-5-sonnet"
+    "initial_assessment": "openrouter/deepseek/deepseek-v4-flash",
+    "plan_adjustment": "openrouter/deepseek/deepseek-v4-flash",
+    "nutrition_planning": "openrouter/deepseek/deepseek-v4-flash",
+    "default": "openrouter/deepseek/deepseek-v4-flash"
   }
 }
