@@ -31,7 +31,7 @@ These patches were applied to the core runtime to ensure reliability:
 
 ## 4. Model Layout Strategy
 - **Claudia (Main):** DeepSeek R1 (Deep Reasoning) for complex tasks.
-- **Pulse (Fitness):** DeepSeek V4 Flash for instant, low-latency conversation.
+- **Pulse (Fitness):** OpenAI GPT-4o-Mini for instant, low-latency, and stable conversation.
 - **Architect Prime:** Claude 4.7 Opus for system-wide engineering and configuration.
 
 ## 5. Adding a New Agent

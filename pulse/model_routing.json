@@ -1,10 +1,8 @@
 {
-  "tasks": {
-    "daily_checkin": "openrouter/deepseek/deepseek-v4-flash",
-    "workout_log": "openrouter/deepseek/deepseek-v4-flash",
-    "initial_assessment": "openrouter/deepseek/deepseek-v4-flash",
-    "plan_adjustment": "openrouter/deepseek/deepseek-v4-flash",
-    "nutrition_planning": "openrouter/deepseek/deepseek-v4-flash",
-    "default": "openrouter/deepseek/deepseek-v4-flash"
-  }
+    "daily_checkin": "openrouter/openai/gpt-4o-mini",
+    "workout_log": "openrouter/openai/gpt-4o-mini",
+    "initial_assessment": "openrouter/openai/gpt-4o-mini",
+    "plan_adjustment": "openrouter/openai/gpt-4o-mini",
+    "nutrition_planning": "openrouter/openai/gpt-4o-mini",
+    "default": "openrouter/openai/gpt-4o-mini"
 }
