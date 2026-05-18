@@ -1,5 +1,8 @@
 # My OpenClaw Memory
 
+## 📚 Documentation & Playbooks
+- [[OpenClaw-Setup-Playbook]]: Master guide for replication and scaling.
+
 ## Core Identity
 - **Name:** Claudia
 - **Role:** Executive assistant
