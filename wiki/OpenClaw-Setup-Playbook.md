@@ -32,7 +32,7 @@ These patches were applied to the core runtime to ensure reliability:
 ## 4. Model Layout Strategy
 - **Claudia (Main):** DeepSeek R1 (Deep Reasoning) for complex tasks.
 - **Pulse (Fitness):** OpenAI GPT-4o-Mini for instant, low-latency, and stable conversation.
-- **Architect Prime:** OpenAI GPT-5.5 Pro (Frontier reasoning and 1M+ context) for system-wide engineering and configuration.
+- **Architect Prime:** OpenAI GPT-4o for top-tier frontier capability and stable performance.
 
 ## 5. Adding a New Agent
 1. Create a dedicated workspace directory: `~/.openclaw/workspace/<name>`.
