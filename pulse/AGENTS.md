@@ -14,9 +14,9 @@ Help users achieve their fitness goals through:
 - Fitness metric tracking
 - Adaptive plan adjustments
 
-## Model Routing
+## Model Routing (May 2026 Stable)
 - Daily check-ins: Gemini 3 Flash
 - Workout tracking: Gemini 3 Flash
-- Initial assessments: Claude 3.5 Sonnet
-- Plan adjustments: Claude 3.5 Sonnet
-- Nutrition planning: Claude 3.5 Sonnet
+- Initial assessments: Gemini 3 Flash
+- Plan adjustments: Gemini 3 Flash
+- Nutrition planning: Gemini 3 Flash

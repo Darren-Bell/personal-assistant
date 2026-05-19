@@ -23,20 +23,23 @@ All agents must follow the "Persistent Wiki" pattern:
 - `raw/`: Source documents.
 - `log.md`: Chronological log of memory operations.
 
-## 3. Performance & Stability Patches
-These patches were applied to the core runtime to ensure reliability:
-- **Discord Connection Timeout:** Increased from 2.5s to 10s in `extensions/discord/dist/channel-Bliqi-Qi.js`.
 ## 3. Communication Strategy
-- **Discord Policy:** Set to `groupPolicy: "disabled"`. This prevents unauthorized inbound group triggers and satisfies the multi-user security heuristic.
-- **Reporting:** Outbound reports (like security audits) are pushed via `openclaw message send` from local cron scripts, bypassing conversational routing rules.
-- **Direct Messaging:** Private 1:1 interaction is available via the `pairing` policy for trusted operators.
-## 4. Model Layout Strategy
-- **Claudia (Main):** DeepSeek R1 (Deep Reasoning) for complex tasks.
-- **Pulse (Fitness):** Google Gemini 3 Flash Preview for instant, low-latency, and stable conversation.
-- **Architect Prime:** OpenAI GPT-5.5 Pro for top-tier frontier capability and stable performance.
+- **Discord Policy:** Set to `groupPolicy: "allowlist"`. Access is strictly restricted via `allowFrom` to specific User IDs (e.g., `1505248096970477650`).
+- **Reporting:** Outbound reports (like security audits) are pushed via `openclaw message send` from local cron scripts.
+- **Direct Messaging:** Private 1:1 interaction is available via the `allowlist` policy for trusted operators.
 
-## 5. Adding a New Agent
+## 4. Model Layout Strategy (May 2026 Stable)
+- **Claudia (Main):** DeepSeek R1 (Deep Reasoning). Thinking is suppressed in visible chat via `reasoningDefault: off` and strict system prompt overrides.
+- **Pulse (Fitness):** Google Gemini 3 Flash Preview. Stable, low-latency, and high context (1M tokens).
+- **Architect Prime:** OpenAI GPT-4o. Used as the stable frontier model for high-reliability architectural tasks.
+
+## 5. Security Protocols
+- **Automated Audits:** Daily deep security audits are scheduled via cron.
+- **Risk Filtering:** The audit script (`run_security_audit.sh`) filters out known baseline warnings (Control UI insecure auth, Multi-user heuristic) and only alerts Discord on *new* risks or critical errors.
+- **User Lock:** The `gateway.auth.rateLimit` and `allowFrom` configurations ensure only the primary operator can interact with the system.
+
+## 6. Adding a New Agent
 1. Create a dedicated workspace directory: `~/.openclaw/workspace/<name>`.
 2. Copy the standard `AGENTS.md` and `IDENTITY.md` templates.
-3. Register the agent in `openclaw.json` (keep the JSON minimal to avoid UI schema errors).
+3. Register the agent in `openclaw.json`.
 4. Create a new Discord bot and follow the **Multi-Bot Architecture** steps above.
