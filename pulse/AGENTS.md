@@ -15,8 +15,8 @@ Help users achieve their fitness goals through:
 - Adaptive plan adjustments
 
 ## Model Routing
-- Daily check-ins: GPT-4o-Mini
-- Workout tracking: GPT-4o-Mini
+- Daily check-ins: Gemini 3 Flash
+- Workout tracking: Gemini 3 Flash
 - Initial assessments: Claude 3.5 Sonnet
 - Plan adjustments: Claude 3.5 Sonnet
 - Nutrition planning: Claude 3.5 Sonnet

@@ -1,8 +1,8 @@
 {
-    "daily_checkin": "openrouter/openai/gpt-4o-mini",
-    "workout_log": "openrouter/openai/gpt-4o-mini",
-    "initial_assessment": "openrouter/openai/gpt-4o-mini",
-    "plan_adjustment": "openrouter/openai/gpt-4o-mini",
-    "nutrition_planning": "openrouter/openai/gpt-4o-mini",
-    "default": "openrouter/openai/gpt-4o-mini"
+    "daily_checkin": "openrouter/google/gemini-3-flash-preview",
+    "workout_log": "openrouter/google/gemini-3-flash-preview",
+    "initial_assessment": "openrouter/google/gemini-3-flash-preview",
+    "plan_adjustment": "openrouter/google/gemini-3-flash-preview",
+    "nutrition_planning": "openrouter/google/gemini-3-flash-preview",
+    "default": "openrouter/google/gemini-3-flash-preview"
 }

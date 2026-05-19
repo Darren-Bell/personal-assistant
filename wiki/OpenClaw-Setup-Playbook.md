@@ -26,12 +26,13 @@ All agents must follow the "Persistent Wiki" pattern:
 ## 3. Performance & Stability Patches
 These patches were applied to the core runtime to ensure reliability:
 - **Discord Connection Timeout:** Increased from 2.5s to 10s in `extensions/discord/dist/channel-Bliqi-Qi.js`.
-- **Typing Indicator:** Enabled for Guild/Group channels in `extensions/discord/dist/message-handler-BqHzvcYS.js`.
-- **Agent Timeouts:** Set `agents.defaults.timeoutSeconds: 300` to accommodate slow reasoning models like DeepSeek R1.
-
+## 3. Communication Strategy
+- **Discord Policy:** Set to `groupPolicy: "disabled"`. This prevents unauthorized inbound group triggers and satisfies the multi-user security heuristic.
+- **Reporting:** Outbound reports (like security audits) are pushed via `openclaw message send` from local cron scripts, bypassing conversational routing rules.
+- **Direct Messaging:** Private 1:1 interaction is available via the `pairing` policy for trusted operators.
 ## 4. Model Layout Strategy
 - **Claudia (Main):** DeepSeek R1 (Deep Reasoning) for complex tasks.
-- **Pulse (Fitness):** DeepSeek V4 Flash for instant, low-latency conversation.
+- **Pulse (Fitness):** Google Gemini 3 Flash Preview for instant, low-latency, and stable conversation.
 - **Architect Prime:** OpenAI GPT-5.5 Pro for top-tier frontier capability and stable performance.
 
 ## 5. Adding a New Agent
